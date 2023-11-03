@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: ghostwhite;
+}
+
+label{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.card{
+    max-width: 900px;
+    background-color: rgb(83, 152, 213);
+    margin: 10px auto;
+    box-shadow: 0px 2px 4px black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row{
+    margin-top: 15px;
+}
+
+.row div{
+    padding: 10px;
+}
+.row input{
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 16px;
+}
+
+.row button{
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.row p{
+    margin-top: 10px;
+    font-size: 16x;
+    text-align: center;
+
+}

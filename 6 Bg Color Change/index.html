@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html , body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 3rem;
+            color: #4d4d4d;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            background-color: navy;
+            color: white;
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+        button:hover{
+            opacity: .7;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="btn">Background Color Changer</button>
+    </div>
+    <script>
+
+        const body=document.body
+        const btn=document.getElementById('btn')
+
+        body.addEventListener('click',changebg)
+        btn.addEventListener('click',changebg)
+
+        function changebg(){
+            const randomcolor=getrandom()
+            const randomcolor1=getrandom1()
+            body.style.backgroundColor=randomcolor
+            btn.style.backgroundColor=randomcolor1
+        }
+
+        function getrandom(){
+            const letters='0123456789ABCDEF'
+            let color='#'
+            for(let i=0;i<6;i++){
+                color+=letters[Math.floor(Math.random()*16)]
+            }
+            return color
+        }
+        function getrandom1(){
+            const letters='0123456789ABCDEF'
+            let color='#'
+            for(let i=0;i<3;i++){
+                color+=letters[Math.floor(Math.random()*16)]
+            }
+            return color
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html , body{
+            height: 100%;
+            width: 100%;
+        }
+        button{
+            width: 60px;
+            height: 200px;
+            margin: 2px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+
+        }
+        body{
+            text-align: center;
+            background-color: rgba(124, 152, 83, 0.748);
+        }
+        .paino-container{
+            padding: 10px;
+        }
+
+        .white-key{
+            background-color: white;
+        }
+        .black-key{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="paino-container">
+        <h1>Piano App</h1>
+        <div>
+            <button onclick="playsound('c')" class="white-key">A</button>
+            <button onclick="playsound('a')" class="black-key">B</button>
+            <button onclick="playsound('b')" class="white-key">C</button>
+            <button onclick="playsound('d')" class="black-key">D</button>
+            <button onclick="playsound('e')" class="white-key">E</button>
+            <button onclick="playsound('f')" class="black-key">F</button>
+            <button onclick="playsound('g')" class="white-key">H</button>
+            <button onclick="playsound('a')" class="black-key">I</button>
+
+            <button onclick="playsound('1')" class="white-key">1</button>
+            <button onclick="playsound('2')" class="white-key">2</button>
+            <button onclick="playsound('3')" class="white-key">3</button>
+            <button onclick="playsound('4')" class="white-key">4</button>
+            <button onclick="playsound('5')" class="white-key">5</button>
+        </div>
+    </div>
+    <script>
+
+        function playsound(note){
+            var audio=new Audio('sounde/'+note+'.mp3')
+            audio.play()
+        }
+    </script>
+</body>
+</html>
